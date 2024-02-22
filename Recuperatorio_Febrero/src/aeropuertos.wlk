@@ -15,6 +15,11 @@ object cargar_aeropuertos{
 	const capacidad_operacion_maxima = 10
 	var property aeronaves_pista = []
 
+
+    method cantidadAeropuertos()
+    {
+    	return lista_aeropuertos.size()
+    }
     method crear_aeropuertos(cant_aeropuertos){
             new Range(start = 1, end = cant_aeropuertos).forEach({n =>
                 const aerop = new Aeropuerto(

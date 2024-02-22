@@ -52,7 +52,7 @@ object crear_aeronaves{
 	
 	method cargar_aeronaves(cant_aeronaves){
 		new Range(start = 1, end = cant_aeronaves).forEach({n =>
-			const aeron = new Aeronave(posicion_aeronave = 0.randomUpTo(cargar_aeropuertos.lista_aeropuertos()),
+			const aeron = new Aeronave(posicion_aeronave = cargar_aeropuertos.lista_aeropuertos().anyOne(),// 0.randomUpTo(cargar_aeropuertos.cantidadAeropuertos())
 				estado_aeronave = "En Terminal",
 				plan_de_vuelo = plan_de_vuelo)
 			lista_aeronaves.add(aeron)})
